@@ -92,6 +92,15 @@ outlierについての方針
 * 外れ値のあるだろう連続値の分布をlog変換 -> __target に関しては、逆変換で戻せるから__
 * 1% 99% の%点にクリップ -> features __np.log1pは全てのデータ点に影響してしまうから__
 
+#### nb002_processing.py
+code directoryに移動してcommad line から以下を実行
+```
+python nb002_processing.py
+```
+data/raw/train.csv, data/raw/test.csv からデータを読み込んで前処理を行う
+**OneHotEncoding**
+**target をlog変換しているのでsubmittの時には要注意, np.expで逆変換をかけるように**
+* このコードは本当に正しいのか不安ではある
 
 
     
